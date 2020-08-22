@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">SovietBoxersBearings</string>
+    <string name="app_name">Soviet Boxers</string>
+    <string name="connecting">Connecting</string>
+    <string name="waiting">Waiting for server response</string>
 </resources>
