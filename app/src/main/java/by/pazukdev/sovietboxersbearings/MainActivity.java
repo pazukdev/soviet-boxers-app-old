@@ -46,16 +46,6 @@ public class MainActivity extends AppCompatActivity {
         if (savedInstanceState == null) {
             view.loadUrl(URL);
         }
-        final SwipeRefreshLayout swipeRefreshLayout = findViewById(R.id.swiperefreshlayout);
-        swipeRefreshLayout.setOnRefreshListener(
-                new SwipeRefreshLayout.OnRefreshListener() {
-                    @Override
-                    public void onRefresh() {
-                        view.reload();
-                        swipeRefreshLayout.setRefreshing(false);
-                    }
-                }
-        );
     }
 
     @Override

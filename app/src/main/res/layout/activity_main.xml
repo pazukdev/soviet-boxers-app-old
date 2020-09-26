@@ -8,29 +8,30 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
-    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-            android:id="@+id/swiperefreshlayout"
-            android:layout_width="0dp"
-            android:layout_height="0dp" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent">
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/black"
+            android:id="@+id/container">
+
         <WebView
                 android:id="@+id/webview"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
-    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+                android:layout_height="match_parent"
+                android:layout_above="@id/adView"/>
 
-    <com.google.android.gms.ads.AdView
-            android:id="@+id/adView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentBottom="true"
-            app:adSize="BANNER"
-            app:adUnitId="ca-app-pub-3405326739489796/8100928324"
-            app:layout_constraintBottom_toBottomOf="@+id/swiperefreshlayout"
-            app:layout_constraintStart_toStartOf="@+id/swiperefreshlayout"
-            app:layout_constraintEnd_toEndOf="parent">
-    </com.google.android.gms.ads.AdView>
+        <!--    sample: ca-app-pub-3940256099942544/6300978111-->
+        <!--    my 1: ca-app-pub-3405326739489796/8100928324-->
+        <!--    my 2: ca-app-pub-3405326739489796/7164805505-->
+        <com.google.android.gms.ads.AdView
+                android:id="@+id/adView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                app:adSize="BANNER"
+                app:adUnitId="ca-app-pub-3405326739489796/7164805505"/>
+
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
